@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/controllers/seriesController.js"></script>
+<script src="js/factories/seriesFactory.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/movies.css">
+<body ng-app="movies">
+	
+	<div id="headerContent">
+	<div id="Caption">
+      <div class="menuBar"> <br>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li id="menuFeel"><a href="movies.html">movies</a></li>
+              <li><a href="series.html">Series</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="weather.html" target="_blank">Help</a></li>
+            </ul>
+          </div>
+
+      	<input id="search" type="text" name="" placeholder="search">
+    </div>
+    <div id="titleCont"><span id="bigTitle">Latest Popular Movies</span></div>
+    <button id="btnExplore">Explore</button>
+	</div>
+  <span style="color:red;font-weight:normal;font-size:65px;position:absolute;margin-top:90px;margin-left:600px;">Series</span>
+  <div id="movieDiv" ng-controller="moviecontroller as mc" ng-init="mc.getAllSeries()"><!---->
+    <div ng-repeat="movie in mc.popularMovies" class="movieDisplay">
+        <img Height="365px" Width="250px" style="position:absolute;" src="{{'https://image.tmdb.org/t/p/w300_and_h450_bestv2'+movie.poster_path}}">
+        <span style="position:absolute;margin-top:378px;font-weight:normal;font-size:18px;margin-left:10px;">{{movie.first_air_date}}</span>
+        <div id="showDetails">
+          <br><br><br><br><br><br><br><br>
+          <img id="inforIcon"  src="infor.png">
+        </div>
+        <span style="position:absolute;margin-top:378px;margin-left:190px;">{{movie.vote_average&nbsp;&nbsp;}}<img Height="20px" Width="20px" src="rate.png"></span>
+    </div>
+  </div>
+</body>
+</html>

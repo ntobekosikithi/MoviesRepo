@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/controllers/movieController.js"></script>
+<script src="js/factories/movieFactory.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<body ng-app="movies">
+	<div id="header">
+		
+        <video autoplay preload="auto" loop muted class="video">
+			<source src="videoMix.mp4" type="video/mp4">
+		</video>
+
+	</div>
+	<div id="headerContent">
+	<div id="Caption">
+      <div class="menuBar"> <br>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li id="menuFeel"><a href="movies.html">movies</a></li>
+              <li><a href="series.html">Series</a></li>
+              <li><a href="">About Us</a></li>
+              <li><a href="weather.html" target="_blank">Help</a></li>
+            </ul>
+          </div>
+
+      	<input id="search" type="text" name="" placeholder="search">
+    </div>
+    <div id="titleCont"><span id="bigTitle">Latest Popular Movies</span></div>
+    <button id="btnExplore">Explore</button>
+	</div>
+ 
+  
+</body>
+</html>
